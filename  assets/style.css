@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+
+
+:root{
+
+    --primarytextcolor:#232e35;
+    --seconderytextcolor:#656d72;
+
+    --bordercolor:#f1f1f1;
+    --linecolor:#d9d9d9;
+
+    --primaryBackgroundColor:#fff;
+    --secondaryBackgroundColor:#fbfbfb;
+    --thirdbackgroundcolor:#f5f3fe;
+
+    --primaryiconcolor:#7e74f1;
+    --primaryIconColorhover:#5246d6;
+
+    --sectionpadding: 6rem 0;
+
+    --ItemborderRadius: 0.7rem;
+
+    }
+    
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+
+*,
+*::before
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong{
+    color: var(--primarytextcolor);
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 90%;
+    }   
+  }
+
+/* REUSABLE STYLE */
+
+.pre-title{
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--seconderytextcolor);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pre-title::before{
+  content: "";
+  width: 30px;
+  height: 1.5px;
+  background-color: var(--seconderytextcolor);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+.section-title{
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2rem;
+}
+
+
+
+  /* LOGO AND NAVIGATION MENU */
+
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  .nav ul{
+    /* list-style: none; */
+    display: flex;
+    gap: 3rem;
+  }
+
+  .nav .logo:is(:hover, :focus-visible) {
+    color: rgb(124, 45, 197);
+    transition: 0.5s;
+  }
+
+  .nav .logo{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #b0aaf6;
+  }
+
+  nav ul li{
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul li{
+    color: var(--primarytextcolor);
+  }
+
+  nav ul li a:is(:hover, :focus-visible) {
+    color: #7e74f1;
+    transition: 0.5s;
+  }
+
+  /* BURGER ENAKKK */
+
+  .burger div{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 7px;
+  }
+
+  .burger{
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+  }
+  
+  /* HERO SECTION */
+
+  #hero{
+    padding: var(--sectionpadding);
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .hero-name{
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    /* ATAS (KANAN KIRI) BAWAH */
+  }
+
+  .hero-name span{
+    color: rgb(124, 37, 159);
+  }
+
+  .hero-right{
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-right .img-card{
+    overflow: hidden;
+    width: 450px;
+    height: 400px;
+  }
+  
+  .hero-right img{
+    width: 50%;
+    border-radius: 100%;
+    align-items: center;
+    
+  }
+
+  /* SERVICE SECTION */
+
+  #services{
+    padding: var(--sectionpadding);
+    background-color: #fcfcfc;
+  }
+
+  .services-section .pre-title{
+    margin: 0 auto;
+  }
+
+  .services-title{
+    text-align: center ;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 2rem;
+  }
+
+  .btn{
+    background-color: #fff;
+    border: 1.5px solid;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 0.2rem;
+  }
+
+  .btn:hover{
+    background-color: rgb(133, 111, 233);
+    color: #fdfdfd;
+  }
+
+/* LOGO AND NAVIGATION MENU */
+  #services{
+    padding: var(--sectionpadding);
+  background-color: var(--secondaryBackgroundColor)
+  }
+
+
+  .service-card {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: rgb(210, 192, 244);
+    border-radius: var(--ItemborderRadius);
+  }
+
+  .service-icon{
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.7rem;
+    border-radius: var(--ItemborderRadius);
+  }
+
+  .service-icon svg{
+    fill: rgb(192, 133, 227);
+  }
+
+  .service-title{
+    margin: 1.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  /*-----------------------------------*\
+            CARD SECTION
+\*-----------------------------------*/
+
+  
+  #portfolio{
+    background-color: var(--secondaryBackgroundColor);
+    border-radius: var(--ItemborderRadius);
+    
+  }
+
+  .portfolio-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    gap: 3rem;
+    overflow: hidden;
+  }
+
+  /* .portfolio-cover{
+    overflow: hidden;
+  } */
+  
+  .portfolio-title{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .portfolio-info{
+    padding: 2rem 1.5rem;
+  }
+
+  .portfolio-tags{
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+
+  .portfolio-tags div{
+    font-size: .9rem;
+    border: 1px solid var(--secondaryBackgroundColor);
+    padding: .4rem 1rem;
+    color: var(--seconderytextcolor);
+    color: var(--ItemborderRadius);
+  }
+
+  .portfolio-card{
+    border-radius: 20%;
+  }
+
+  .portfolio-cover{
+    border-radius: 20%;
+    background-color: rgb(244, 244, 244);
+  }
+
+  /*-----------------------------------*\
+  SKILLS & EDUCATION
+\*-----------------------------------*/
+
+#skills{
+  padding: var(--sectionpadding);
+  background-color: var(--secondaryBackgroundColor);
+}
+
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 3rem;
+}
+
+.education{
+  display: flex;
+  gap: 2rem;
+}
+
+.education .line{
+  padding: 0 0.7rem;
+
+}
+
+.education .line div{
+  background-color: rgb(101, 9, 101);
+  width: 2px;
+  height: 100%;
+  position: relative;
+}
+
+/* .education .education-info p{
+  padding: .6rem 0 1.4rem;
+} */
+
+.education-years{
+  margin-bottom: 3rem;
+}
+
+.education .line div::before{
+  content: "";
+  background-color: var(--bordercolor);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(101, 9, 101);
+  left: -6px;
+}
+
+.skills-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
+}
+
+.skills-list ul{
+  line-height: 2rem;
+  padding-inline: 0 1rem;
+}
+
+.skills-list ul li{
+  list-style: disc;
+}
+
+/*-----------------------------------*\
+  CONTACT SECTION
+\*-----------------------------------*/
+
+#contact{
+  padding: var(--sectionpadding);
+}
+
+.contact-form div{
+  margin-bottom: 1.2rem;
+}
+
+.contact-form input, .contact-form textarea{
+  width: 100%;
+  padding: 1rem 1.5rem;
+  resize: none;
+  box-sizing: border-box;
+  font-family: 'Roboto',sans-serif;
+  background-color: var(--secondaryBackgroundColor);
+  border: solid 1px var(--bordercolor);
+  border-radius: 3px;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+  color: var(--seconderytextcolor);
+}
+
+.contact-form input:focus, .contact-form textarea:focus{
+  outline: none;
+  border-color: var(--primarytextcolor);
+}
+
+.submit-btn{
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--primaryiconcolor);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.submit-btn:hover{
+  background-color: plum;
+  color: azure;
+}
+
+.contact-icon{
+  background-color: rgb(193, 160, 255);
+  border-radius: 0.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon svg{
+  fill: #232e35;
+}
+
+.contact-item{
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info h4{
+  margin: 0;
+}
+
+/*-----------------------------------*\
+  FOOTER SECTION
+\*-----------------------------------*/
+
+.ft-svg:hover{
+  fill: #6b5ef8;
+}
+
+
+.footer-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
