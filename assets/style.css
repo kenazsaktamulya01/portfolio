@@ -181,6 +181,11 @@ li{
     margin: 10px;
   }
 
+
+.hero-left{
+    margin: 1rem;
+}
+
   .hero-name{
     font-size: 3rem;
     font-weight: 600;
